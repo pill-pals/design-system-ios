@@ -6,6 +6,7 @@
 //  Copyright © 2019 PillPals. All rights reserved.
 //
 
+#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
 //! Project version number for DesignSystem.

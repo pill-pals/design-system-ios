@@ -10,6 +10,9 @@
 		EC74C9842339A4F400C5CE79 /* DesignSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC74C97A2339A4F400C5CE79 /* DesignSystem.framework */; };
 		EC74C9892339A4F400C5CE79 /* DesignSystemTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC74C9882339A4F400C5CE79 /* DesignSystemTests.swift */; };
 		EC74C98B2339A4F400C5CE79 /* DesignSystem.h in Headers */ = {isa = PBXBuildFile; fileRef = EC74C97D2339A4F400C5CE79 /* DesignSystem.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EC74C99E2339A57200C5CE79 /* DesignColours.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC74C99D2339A57200C5CE79 /* DesignColours.swift */; };
+		EC74C9A02339A5DE00C5CE79 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC74C99F2339A5DE00C5CE79 /* Extensions.swift */; };
+		EC74C9A42339AA0C00C5CE79 /* DesignSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC74C97A2339A4F400C5CE79 /* DesignSystem.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +32,8 @@
 		EC74C9832339A4F400C5CE79 /* DesignSystemTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DesignSystemTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC74C9882339A4F400C5CE79 /* DesignSystemTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignSystemTests.swift; sourceTree = "<group>"; };
 		EC74C98A2339A4F400C5CE79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC74C99D2339A57200C5CE79 /* DesignColours.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignColours.swift; sourceTree = "<group>"; };
+		EC74C99F2339A5DE00C5CE79 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC74C9A42339AA0C00C5CE79 /* DesignSystem.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +79,8 @@
 			children = (
 				EC74C97D2339A4F400C5CE79 /* DesignSystem.h */,
 				EC74C97E2339A4F400C5CE79 /* Info.plist */,
+				EC74C99D2339A57200C5CE79 /* DesignColours.swift */,
+				EC74C99F2339A5DE00C5CE79 /* Extensions.swift */,
 			);
 			path = DesignSystem;
 			sourceTree = "<group>";
@@ -148,6 +156,7 @@
 				TargetAttributes = {
 					EC74C9792339A4F400C5CE79 = {
 						CreatedOnToolsVersion = 10.3;
+						LastSwiftMigration = 1030;
 					};
 					EC74C9822339A4F400C5CE79 = {
 						CreatedOnToolsVersion = 10.3;
@@ -194,6 +203,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC74C99E2339A57200C5CE79 /* DesignColours.swift in Sources */,
+				EC74C9A02339A5DE00C5CE79 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +352,7 @@
 		EC74C98F2339A4F400C5CE79 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -350,6 +362,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = DesignSystem/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -358,6 +371,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.pillpals.DesignSystem;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -366,6 +380,7 @@
 		EC74C9902339A4F400C5CE79 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -375,6 +390,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = DesignSystem/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -391,6 +407,7 @@
 		EC74C9922339A4F400C5CE79 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B6G37G32MJ;
 				INFOPLIST_FILE = DesignSystemTests/Info.plist;
@@ -409,6 +426,7 @@
 		EC74C9932339A4F400C5CE79 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = B6G37G32MJ;
 				INFOPLIST_FILE = DesignSystemTests/Info.plist;
