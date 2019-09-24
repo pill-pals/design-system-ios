@@ -15,7 +15,7 @@ public class DesignColours {
     public static var turquoise = UIColor(hexString: "#00DFBC")
     public static var lightBlue = UIColor(hexString: "#DADAEA")
     public static var purple = UIColor(hexString: "#28275A")
-    
+
     public init() {
         // Set read-onlys
         var primary: UIColor {
