@@ -16,7 +16,7 @@ Pod::Spec.new do |spec|
   #
 
   spec.name         = "DesignSystem"
-  spec.version      = "1.0.0"
+  spec.version      = "1.0.1"
   spec.summary      = "Pill Pals iOS Design System"
 
   # This description is used to generate tags and improve search results.
@@ -80,7 +80,7 @@ Pod::Spec.new do |spec|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  spec.source       = { :git => "https://github.com/pill-pals/design-system-ios.git", :commit => "8bbd1afe00e5f3a92a5995ebf92719505b9130e0" }
+  spec.source       = { :git => "https://github.com/pill-pals/design-system-ios.git", :commit => "79c405fb3e6522ca9fd0da36fcfde1640e0b574d" }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
