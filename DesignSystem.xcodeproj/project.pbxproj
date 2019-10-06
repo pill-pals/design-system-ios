@@ -15,6 +15,8 @@
 		EC74C9A42339AA0C00C5CE79 /* DesignSystem.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC74C97A2339A4F400C5CE79 /* DesignSystem.framework */; };
 		EC74C9AD233A484000C5CE79 /* design-system-ios.podspec in Resources */ = {isa = PBXBuildFile; fileRef = EC74C9AC233A484000C5CE79 /* design-system-ios.podspec */; };
 		EC74C9AF233A487B00C5CE79 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = EC74C9AE233A487B00C5CE79 /* Podfile */; };
+		EC9506AE234959F500DEC97F /* DrugCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC9506AD234959F500DEC97F /* DrugCard.swift */; };
+		EC9506B3234A609100DEC97F /* DrugCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = EC9506AB234958AD00DEC97F /* DrugCard.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,8 @@
 		EC74C99F2339A5DE00C5CE79 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		EC74C9AC233A484000C5CE79 /* design-system-ios.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "design-system-ios.podspec"; sourceTree = "<group>"; };
 		EC74C9AE233A487B00C5CE79 /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
+		EC9506AB234958AD00DEC97F /* DrugCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrugCard.xib; sourceTree = "<group>"; };
+		EC9506AD234959F500DEC97F /* DrugCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrugCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +91,8 @@
 				EC74C97E2339A4F400C5CE79 /* Info.plist */,
 				EC74C99D2339A57200C5CE79 /* DesignColours.swift */,
 				EC74C99F2339A5DE00C5CE79 /* Extensions.swift */,
+				EC9506AB234958AD00DEC97F /* DrugCard.xib */,
+				EC9506AD234959F500DEC97F /* DrugCard.swift */,
 			);
 			path = DesignSystem;
 			sourceTree = "<group>";
@@ -196,6 +202,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC74C9AF233A487B00C5CE79 /* Podfile in Resources */,
+				EC9506B3234A609100DEC97F /* DrugCard.xib in Resources */,
 				EC74C9AD233A484000C5CE79 /* design-system-ios.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -215,6 +222,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC74C99E2339A57200C5CE79 /* DesignColours.swift in Sources */,
+				EC9506AE234959F500DEC97F /* DrugCard.swift in Sources */,
 				EC74C9A02339A5DE00C5CE79 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
