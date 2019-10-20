@@ -11,6 +11,7 @@ import UIKit
 
 public class DrugCard: UIView {
     @IBOutlet public var cardView: UIView!
+    @IBOutlet public weak var drugCard: UIView!
     @IBOutlet public weak var drugName: UILabel!
     @IBOutlet public weak var drugTime: UILabel!
     @IBOutlet public weak var lateLabel: UILabel!
@@ -48,22 +49,13 @@ public class DrugCard: UIView {
     public func stretchToSuperView()
     {
         self.translatesAutoresizingMaskIntoConstraints = false
-        //print(self.superview?.widthAnchor)
+
         guard let superview = self.superview else {
             print("Error! `superview` was nil – call `addSubview(view: UIView)` before calling `bindFrameToSuperviewBounds()` to fix this.")
             return
         }
+
         NSLayoutConstraint(item: self.subviews[0], attribute: NSLayoutConstraint.Attribute.width, relatedBy: NSLayoutConstraint.Relation.equal, toItem: superview, attribute: NSLayoutConstraint.Attribute.width, multiplier: 1, constant: 0).isActive = true
         self.heightAnchor.constraint(equalToConstant: 72).isActive = true
-        
-        
-        //self.superview?.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-0-[subview]-0-|", options: .directionLeadingToTrailing, metrics: nil, views: ["subview": self]))
-//        var d = Dictionary<String,UIView>()
-//        d["view"] = self
-//        for axis in ["H"] {
-//            let format = "\(axis):|[view]|"
-//            let constraints = NSLayoutConstraint.constraints(withVisualFormat: format, options: NSLayoutConstraint.FormatOptions(rawValue: 0), metrics: [:], views: d)
-//            self.superview?.addConstraints(constraints)
-//        }
     }
 }
