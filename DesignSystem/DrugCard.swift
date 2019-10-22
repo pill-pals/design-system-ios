@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import CoreData
 
 public class DrugCard: UIView {
     @IBOutlet public var cardView: UIView!
@@ -16,7 +17,8 @@ public class DrugCard: UIView {
     @IBOutlet public weak var drugTime: UILabel!
     @IBOutlet public weak var lateLabel: UILabel!
     @IBOutlet public weak var logButton: UIButton!
-    
+    public var schedule: NSManagedObject?
+
     @IBAction public func logDrug(_ sender: Any) {
     }
     
