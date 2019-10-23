@@ -17,6 +17,8 @@ public class DrugCard: UIView {
     @IBOutlet public weak var drugTime: UILabel!
     @IBOutlet public weak var lateLabel: UILabel!
     @IBOutlet public weak var logButton: UIButton!
+    @IBOutlet public weak var countdownLabel: UILabel!
+    @IBOutlet public weak var doneImage: UIImageView!
     public var schedule: NSManagedObject?
 
     @IBAction public func logDrug(_ sender: Any) {

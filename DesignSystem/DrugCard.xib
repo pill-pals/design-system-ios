@@ -16,6 +16,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DrugCard">
             <connections>
                 <outlet property="cardView" destination="iN0-l3-epB" id="v3S-Nn-m5X"/>
+                <outlet property="countdownLabel" destination="h5o-4T-Tu3" id="UJz-jP-6mD"/>
+                <outlet property="doneImage" destination="KcE-CT-lBQ" id="zm2-i5-qgD"/>
                 <outlet property="drugCard" destination="ueB-0V-jQ1" id="xoB-VT-TAM"/>
                 <outlet property="drugName" destination="Ei8-CC-6re" id="nWR-yt-dOB"/>
                 <outlet property="drugTime" destination="lIQ-bu-LZa" id="eao-xy-AwP"/>
@@ -31,20 +33,22 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ueB-0V-jQ1" userLabel="Drug Card">
                     <rect key="frame" x="0.0" y="0.0" width="343" height="72"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5:00 PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lIQ-bu-LZa">
-                            <rect key="frame" x="8" y="39" width="86" height="22"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="5:00 PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lIQ-bu-LZa">
+                            <rect key="frame" x="8" y="39" width="66.5" height="22"/>
                             <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="18"/>
                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Vyvanse" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ei8-CC-6re">
-                            <rect key="frame" x="8" y="8" width="253" height="24"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Vyvanse" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ei8-CC-6re">
+                            <rect key="frame" x="8" y="8" width="309" height="24"/>
                             <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="20"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="done_outline_24px_rounded" translatesAutoresizingMaskIntoConstraints="NO" id="KcE-CT-lBQ">
+                            <rect key="frame" x="269" y="14" width="66" height="44"/>
+                            <color key="tintColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        </imageView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hzY-pX-Bqw">
                             <rect key="frame" x="269" y="16" width="66" height="40"/>
                             <color key="backgroundColor" red="0.28690442440000002" green="0.57999426129999998" blue="0.35290509460000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -75,19 +79,42 @@
                                 <action selector="logDrug:" destination="-1" eventType="touchUpInside" id="urE-xP-zlK"/>
                             </connections>
                         </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Late" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OC1-VS-u7M">
-                            <rect key="frame" x="88" y="39" width="92" height="22"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Late" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OC1-VS-u7M">
+                            <rect key="frame" x="88" y="39" width="35" height="22"/>
                             <fontDescription key="fontDescription" name="Roboto-Regular" family="Roboto" pointSize="18"/>
                             <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h5o-4T-Tu3">
+                            <rect key="frame" x="269" y="26" width="66" height="21"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="66" id="mNx-Qz-51w"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
+                        <constraint firstItem="OC1-VS-u7M" firstAttribute="baseline" secondItem="lIQ-bu-LZa" secondAttribute="baseline" id="1zt-ac-Hu6"/>
+                        <constraint firstItem="Ei8-CC-6re" firstAttribute="top" secondItem="ueB-0V-jQ1" secondAttribute="top" constant="8" id="28B-iP-aIQ"/>
+                        <constraint firstItem="lIQ-bu-LZa" firstAttribute="top" secondItem="Ei8-CC-6re" secondAttribute="bottom" constant="7" id="9hq-FY-hiP"/>
+                        <constraint firstAttribute="trailing" secondItem="KcE-CT-lBQ" secondAttribute="trailing" constant="8" id="Ev0-eq-EAv"/>
+                        <constraint firstItem="Ei8-CC-6re" firstAttribute="centerX" secondItem="OC1-VS-u7M" secondAttribute="centerX" constant="57" id="Gbu-sJ-0HG"/>
+                        <constraint firstItem="Ei8-CC-6re" firstAttribute="leading" secondItem="lIQ-bu-LZa" secondAttribute="leading" id="IVn-Q8-bcO"/>
+                        <constraint firstItem="OC1-VS-u7M" firstAttribute="leading" secondItem="lIQ-bu-LZa" secondAttribute="trailing" constant="13.5" id="TFi-Re-beH"/>
+                        <constraint firstAttribute="trailing" secondItem="KcE-CT-lBQ" secondAttribute="trailing" constant="8" id="Ur1-qN-0cX"/>
+                        <constraint firstItem="KcE-CT-lBQ" firstAttribute="centerY" secondItem="h5o-4T-Tu3" secondAttribute="centerY" constant="-0.5" id="X1s-IC-Kvd"/>
+                        <constraint firstItem="hzY-pX-Bqw" firstAttribute="leading" secondItem="OC1-VS-u7M" secondAttribute="trailing" constant="146" id="XRH-qU-rZz"/>
+                        <constraint firstAttribute="trailing" secondItem="h5o-4T-Tu3" secondAttribute="trailing" constant="8" id="cSb-el-fwj"/>
                         <constraint firstItem="hzY-pX-Bqw" firstAttribute="centerY" secondItem="ueB-0V-jQ1" secondAttribute="centerY" id="fV6-mw-3HF"/>
+                        <constraint firstItem="KcE-CT-lBQ" firstAttribute="top" secondItem="ueB-0V-jQ1" secondAttribute="top" constant="14" id="hBZ-e8-CFk"/>
+                        <constraint firstItem="Ei8-CC-6re" firstAttribute="leading" secondItem="ueB-0V-jQ1" secondAttribute="leadingMargin" id="tK8-Mu-Nqj"/>
+                        <constraint firstItem="h5o-4T-Tu3" firstAttribute="top" secondItem="ueB-0V-jQ1" secondAttribute="top" constant="26" id="u07-0y-4KA"/>
                         <constraint firstAttribute="height" constant="72" id="uJH-V8-TDm"/>
                         <constraint firstAttribute="trailing" secondItem="hzY-pX-Bqw" secondAttribute="trailing" constant="8" id="wi4-Hw-KNe"/>
+                        <constraint firstItem="KcE-CT-lBQ" firstAttribute="centerX" secondItem="h5o-4T-Tu3" secondAttribute="centerX" id="z9Q-H1-Hnc"/>
                     </constraints>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="boolean" keyPath="maskToBound" value="NO"/>
@@ -132,4 +159,7 @@
             <point key="canvasLocation" x="78.985507246376812" y="-512.27678571428567"/>
         </view>
     </objects>
+    <resources>
+        <image name="done_outline_24px_rounded" width="40" height="40"/>
+    </resources>
 </document>
